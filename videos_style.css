@@ -1,0 +1,22 @@
+.header {
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.header-caption {
+	font-family: Arial, Helvetica, sans-serif;
+}
+.nav-bar{
+	font-family: Arial, Helvetica, sans-serif;
+	display: flex;
+}
+.nav-bar > div {
+	padding: 10px;
+}
+
+.grid-container{
+	display: grid;
+	justify-content: space-evenly;
+	grid-template-columns: auto auto;
+	grid-gap: 100px;
+	padding: 10px;
+}
