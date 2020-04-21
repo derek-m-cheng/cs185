@@ -3,36 +3,34 @@
 <head>
 	<meta charset="utf-8">
 	<title>Photos</title>
-	<link rel="stylesheet" type="text/css" href="photos_style.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
 	<link rel="shortcut icon" type="image/x-icon" href="images/photos.png">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<script defer type="text/javascript" src="script.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
 </head>
-<body style="background-color:#FBF3E8">
+<body>
 	<div class="header">
 		<h1>My Photos</h1>
 	</div>
 	<div class="header-caption">
 		<h3>Here's a selection of my photos!</h3>
 	</div>
-	<div class="nav-bar">
-		<div>
-			<a href="index.html">Home</a>
-		</div>
-		<div>
-			<a href="music.html">Music</a>
-		</div>
-		<div>
-			<a href="photos.html">Photos</a>
-		</div>
-		<div>
-			<a href="videos.html">Videos</a>
-		</div>
+	<div class="navbar">
+		<a href="index.html">Home</a>
+		<a href="music.html">Music</a>
+		<a class="active" href="photos.html">Photos</a>
+		<a href="videos.html">Videos</a>
 	</div>
 
-	<div class="grid-container">
+	<button class="scrollTop"> 
+		<i class="material-icons">arrow_drop_up</i>
+	</button>
+
+	<div class="photos-container">
 		<div>	
 			<img src="images/centralpark.jpg">
-
 			<p>A picture of Central Park taken on a vacation.</p>
 		</div>
 		<div>
@@ -53,26 +51,29 @@
 		</div>
 		<div>
 			<img src="images/shaver2.jpg">
-      <p>A photo taken of a serene meadow on the way down from Kaiser Pass.</p>
+       		<p>A photo taken of a serene meadow on the way down from Kaiser Pass.</p>
 		</div>
 		<div>
-			<a href="https://www.metmuseum.org/art/collection/search/11993">
-				<img src="images/met.jpg">
-			</a>
+			<img src="images/met.jpg">
 			<p>Amor Caritas</p>
 		</div>
 		<div>
-			<a href="https://www.metmuseum.org/art/collection/search/11921">
-				<img src="images/met2.jpg">
-			</a>
+			<img src="images/met2.jpg">
 			<p>Antigone Pouring Libations</p>
 		</div>
 		<div>
-			<a href="https://www.metmuseum.org/art/collection/search/10912">
-				<img src="images/met3.jpg">
-			</a>
+			<img src="images/met3.jpg">
 			<p>Mourning Victory</p>
 		</div>
 	</div>
+
+	
+
+	<script>
+		const scrollTop = document.querySelector(".scrollTop");
+		scrollTop.addEventListener("click", function(){
+			window.scrollTo(0,0);
+		});
+	</script>
 </body>
 </html>

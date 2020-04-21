@@ -3,10 +3,14 @@
 <head>
 	<meta charset="utf-8">
 	<title>Videos</title>
-	<link rel="stylesheet" type="text/css" href="videos_style.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
 	<link rel="shortcut icon" type="image/x-icon" href="images/videos.jpg">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<script type="text/javascript" src="script.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </head>
-<body style="background-color:#FBF3E8">
+
+<body>
 	<div class="header">
 		<h1>Videos</h1>
 	</div>
@@ -15,22 +19,17 @@
 		<h3>Here's a selection of some interesting videos!</h3>
 	</div>
 
-	<div class="nav-bar">
-		<div>
-			<a href="index.html">Home</a>
-		</div>
-		<div>
-			<a href="music.html">Music</a>
-		</div>
-		<div>
-			<a href="photos.html">Photos</a>
-		</div>
-		<div>
-			<a href="videos.html">Videos</a>
-		</div>
+	<div class="navbar">
+		<a href="index.html">Home</a>
+		<a href="music.html">Music</a>
+		<a href="photos.html">Photos</a>
+		<a class="active" href="videos.html">Videos</a>
 	</div>
 
-	<div class="grid-container">
+	<button class="scrollTop"> 
+		<i class="material-icons">arrow_drop_up</i>
+	</button>
+	<div class="videos-container">
 		<div>	
 			<iframe width="400" height="315" src="https://www.youtube.com/embed/V3Um7TJWsoI" allowfulscreen></iframe>
 		</div>
@@ -56,5 +55,12 @@
 			<iframe width="400" height="315" src="https://www.youtube.com/embed/SR1jwwagtaQ" allowfullscreen></iframe>
 		</div>
 	</div>
+
+	<script>
+		const scrollTop = document.querySelector(".scrollTop");
+		scrollTop.addEventListener("click", function(){
+			window.scrollTo(0,0);
+		});
+	</script>
 </body>
 </html>

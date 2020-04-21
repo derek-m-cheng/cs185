@@ -3,33 +3,32 @@
 <head>
 	<meta charset="utf-8">
 	<title>Music</title>
-	<link rel="stylesheet" type="text/css" href="music_style.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
 	<link rel="shortcut icon" type="image/x-icon" href="images/music.png">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<script type="text/javascript" src="script.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
 </head>
-<body style="background-color:#FBF3E8">
+<body>
 	<div class="header">
 		<h1>My Music</h1>
 	</div>
 	<div class="header-caption">
 		<h3>Here's a selection of my music taste!</h3>
 	</div>
-	<div class="nav-bar">
-		<div>
-			<a href="index.html">Home</a>
-		</div>
-		<div>
-			<a href="music.html">Music</a>
-		</div>
-		<div>
-			<a href="photos.html">Photos</a>
-		</div>
-		<div>
-			<a href="videos.html">Videos</a>
-		</div>
+	<div class="navbar">
+		<a href="index.html">Home</a>
+		<a class="active" href="music.html">Music</a>
+		<a href="photos.html">Photos</a>
+		<a href="videos.html">Videos</a>
 	</div>
 
-	<div class="grid-container">
+	<button class="scrollTop"> 
+		<i class="material-icons">arrow_drop_up</i>
+	</button>
+
+	<div class="music-container">
 		<div>
 			<iframe src="https://open.spotify.com/embed/playlist/2JN43T4roMHnH2OGice8Y8" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
 			<p>
@@ -68,5 +67,13 @@
 		</div>
 
 	</div>
+
+	<script>
+		const scrollTop = document.querySelector(".scrollTop");
+		scrollTop.addEventListener("click", function(){
+			window.scrollTo(0,0);
+		});
+	</script>
+	
 </body>
 </html>
